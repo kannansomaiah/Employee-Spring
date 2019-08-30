@@ -15,11 +15,11 @@ public class DemoApplication implements CommandLineRunner{
 
 	@Autowired
 	EmployeeRepository employeeRepository;
-	
+
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
-	
+
 	public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
             @Override
@@ -33,8 +33,8 @@ public class DemoApplication implements CommandLineRunner{
 	public void run(String... args) throws Exception {
 
 		Employee emp1 = new Employee("Kannan", "Somaiah", "kannansomaiah@hotmail.com");
-		Employee emp2 = new Employee("Sathana", "Lakshmanan", "sathana.lakshmanan85@gmail.com");
-		
+		Employee emp2 = new Employee("John", "Paul", "john.paul@gmail.com");
+
 		employeeRepository.save(emp1);
 		employeeRepository.save(emp2);
 	}
